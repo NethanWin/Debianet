@@ -27,13 +27,41 @@ sudo nala install trash-cli zoxide git wine q4wine parcellite doublecmd gparted 
 
 
 
+
+
+
+
+
+
 # virt-manager
-sudo nala install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+sudo nala install qemu-kvm libvirt-daemon-system 
+
+
+
+# TODO from here everything is checked -----------------------------------------------------------------------------
+
+sudo nala install libvirt-clients bridge-utils virt-manager
 
 
 # flathub
 apt nala flatpa gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -45,10 +73,23 @@ cd github
 git clone https://github.com/christitustech/mybash
 cd mybash
 ./setup.sh
-rm -r ~/github/*
+rm -r ~/github/mybash
+
+
+sudo nala autoremove
 
 
 
+
+
+
+
+
+
+
+
+
+#TODO
 
 # prefered aplications
 # web: librewolf
