@@ -1,13 +1,3 @@
-# README
-#
-# run:
-# chmod +x file
-#
-# And to run:
-#
-#./file
-
-
 sudo apt update && sudo apt upgrade
 
 # librewolf
