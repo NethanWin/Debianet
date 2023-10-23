@@ -23,7 +23,7 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
 sudo add-apt-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'
 
 # apt 
-sudo nala install trash-cli zoxide git wine q4wine parcellite doublecmd gparted htop kdeconnect ranger codium mintstick timeshift mintdriver sqlitebrowser python3 python3-pip vulkan-tools vim ffmpeg git dwm
+sudo nala install syncthing trash-cli zoxide git wine q4wine parcellite doublecmd gparted htop kdeconnect ranger codium mintstick timeshift mintdriver sqlitebrowser python3 python3-pip vulkan-tools vim ffmpeg git dwm
 
 
 
@@ -47,8 +47,7 @@ sudo nala install libvirt-clients bridge-utils virt-manager
 apt nala flatpa gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-
-
+flatpak install com.github.zocker_160.SyncThingy org.gimp.GIMP org.zim_wiki.Zim
 
 
 
