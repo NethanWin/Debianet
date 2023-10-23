@@ -1,12 +1,11 @@
-sudo apt update && sudo apt upgrade
+sudo apt install nala
+sudo nala update && sudo nala upgrade
+
 
 # librewolf
-sudo apt update && sudo apt install -y wget gnupg lsb-release apt-transport-https ca-certificates
-
+sudo nala update && sudo nala install -y wget gnupg lsb-release apt-transport-https ca-certificates
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
-
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-
 sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
 Types: deb
 URIs: https://deb.librewolf.net
@@ -16,21 +15,24 @@ Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
 
-sudo apt update
-sudo apt install librewolf -y
+
+sudo nala update
+sudo nala install librewolf -y
+
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
+sudo add-apt-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'
 
 # apt 
-sudo apt install trash-cli zoxide git wine q4wine parcellite doublecmd gparted htop kdeconnect ranger codium mintstick timeshift mintdriver sqlitebrowser python3 python3-pip vulkan-tools vim ffmpeg git dwm
+sudo nala install trash-cli zoxide git wine q4wine parcellite doublecmd gparted htop kdeconnect ranger codium mintstick timeshift mintdriver sqlitebrowser python3 python3-pip vulkan-tools vim ffmpeg git dwm
 
 
 
 # virt-manager
-sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+sudo nala install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
 
 
 # flathub
-apt install flatpak
-apt install gnome-software-plugin-flatpak
+apt nala flatpa gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 
