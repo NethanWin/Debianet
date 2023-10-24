@@ -2,6 +2,15 @@ sudo apt install nala
 sudo nala update && sudo nala upgrade
 
 
+# if lsb_release -i | grep -q "Debian"; then echo "Debian."; else echo "Debian-based"; fi
+if lsb_release -i | grep -q "Debian"; then sudo apt purge gnome-2048 aisleriot atomix gnome-chess five-or-more hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel four-in-a-row gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex -y & sudo apt autoremove -y; else echo "Debian-based"; fi
+
+
+
+
+
+
+
 # librewolf
 sudo nala update && sudo nala install -y wget gnupg lsb-release apt-transport-https ca-certificates
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
