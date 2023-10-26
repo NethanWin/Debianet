@@ -19,8 +19,20 @@ EOF
 sudo nala update
 sudo nala install librewolf -y
 
+#mercury browser
+cd /github
+wget https://github.com/Alex313031/Mercury/releases/download/v.115.4.0/mercury-browser_115.4.0_amd64.deb
+sudo nala install mercury-browser_115.4.0_amd64.deb
+rm mercury-browser_115.4.0_amd64.deb
+
+
+
+
+
+
+
 # apt
-sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorent -y
+sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorrent -y
 
 # imprtant stuff
 sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
