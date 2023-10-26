@@ -1,15 +1,8 @@
 sudo apt install nala -y
 sudo nala update && sudo nala upgrade
 
-
-# if lsb_release -i | grep -q "Debian"; then echo "Debian."; else echo "Debian-based"; fi
-if lsb_release -i | grep -q "Debian"; then sudo apt purge gnome-2048 aisleriot atomix gnome-chess five-or-more hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel four-in-a-row gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex -y & sudo apt autoremove -y; else echo "Debian-based"; fi
-
-
-
-
-
-
+# auto remove games if its debian 12
+# if lsb_release -i | grep -q "Debian"; then sudo apt purge gnome-2048 aisleriot atomix gnome-chess five-or-more hitori iagno gnome-klotski lightsoff gnome-mahjongg gnome-mines gnome-nibbles quadrapassel four-in-a-row gnome-robots gnome-sudoku swell-foop tali gnome-taquin gnome-tetravex -y & sudo apt autoremove -y; else echo "Debian-based"; fi
 
 # librewolf
 sudo nala update && sudo nala install -y wget gnupg lsb-release apt-transport-https ca-certificates
@@ -23,56 +16,51 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-
-
 sudo nala update
 sudo nala install librewolf -y
 
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
-sudo add-apt-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'
 
-# apt 
-sudo nala install syncthing trash-cli zoxide git wine q4wine parcellite doublecmd gparted htop kdeconnect ranger codium mintstick timeshift mintdriver sqlitebrowser python3 python3-pip vulkan-tools vim ffmpeg git dwm
+# codium (not finding source)
 
 
-
-
-
-
+sudo nala install dirmngr software-properties-common apt-transport-https curl -y
+curl -fSsL https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscodium.gpg >/dev/null
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
+sudo nala update
+sudo nala install codium
 
 
 
-# virt-manager
-sudo nala install qemu-kvm libvirt-daemon-system 
+# apt
+sudo nala install syncthing syncthingtray gparted gimp -y
+
+# imprtant stuff
+sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
 
 
 
-# TODO from here everything is checked -----------------------------------------------------------------------------
-
-sudo nala install libvirt-clients bridge-utils virt-manager
-
+# mabye not nececery
+sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli parcellite zoxide q4wine doublecmd-gtk -y
 
 # flathub
-apt nala flatpa gnome-software-plugin-flatpak
+apt add-repository flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-flatpak install com.github.zocker_160.SyncThingy org.gimp.GIMP org.zim_wiki.Zim
+sudo nala autoremove
 
 
 
 
+#TODO
+
+#to check again if its working --------------------------------------------------------
+# virt-manager
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
+#----------------------------------------------------------
 
 
 
-
-
-
-
-
-
-
-
-
+#not working0---------------------------------------
 # git install
 #titus tips mybash
 cd
@@ -80,24 +68,11 @@ mkdir github
 cd github
 git clone https://github.com/christitustech/mybash
 cd mybash
+
+chmod +x setup.sh
 ./setup.sh
 rm -r ~/github/mybash
-
-
-sudo nala autoremove
-
-
-
-
-
-
-
-
-
-
-
-
-#TODO
+-------------------------------------------------------
 
 # prefered aplications
 # web: librewolf
@@ -105,9 +80,6 @@ sudo nala autoremove
 # terminal: kitty
 xdg-settings set default-web-browser librewolf.desktop
 
-
-
-# add syncthingy
 
 # add spotify and spotX
 
@@ -117,5 +89,12 @@ xdg-settings set default-web-browser librewolf.desktop
 #Applications Mint-Y-Dark-Aqua
 #window tiling preferences maximaizing insted of tie when dragging a window to the top edge
 #
+#says which driver to install
+nvidia-detect
 
 
+
+
+
+#already on lmde(not tested):
+#sudo nala install mintstick timeshift -y
