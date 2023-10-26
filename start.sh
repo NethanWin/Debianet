@@ -30,10 +30,6 @@ rm mercury-browser_115.4.0_amd64.deb
 
 
 
-
-
-
-
 # apt
 sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorrent -y
 
@@ -50,35 +46,28 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # virt-manager
 sudo nala install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
 
-sudo nala autoremove -y
 
-
-
-#TODO-------------------------------------
-
-
-
-
-#not working0--------------------------------------------------------
 #titus tips mybash
 cd ~/github
 git clone https://github.com/christitustech/mybash
 cd mybash
-
 chmod +x setup.sh
 ./setup.sh
 rm -r ~/github/mybash
--------------------------------------------------------
 
+sudo nala autoremove -y
+
+
+
+
+
+
+#TODO-------------------------------------
 # prefered aplications
 # web: librewolf
 # file manager: doublecmd
 # terminal: kitty
 xdg-settings set default-web-browser librewolf.desktop
-
-
-# add spotify and spotX
-
 
 #mint lmde changes
 #change icons to Mint-Y-Aqua
@@ -87,10 +76,6 @@ xdg-settings set default-web-browser librewolf.desktop
 #
 #says which driver to install
 nvidia-detect
-
-
-
-
 
 #already on lmde(not tested):
 #sudo nala install mintstick timeshift -y
