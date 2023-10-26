@@ -19,25 +19,11 @@ EOF
 sudo nala update
 sudo nala install librewolf -y
 
-
-# codium (not finding source)
-
-
-sudo nala install dirmngr software-properties-common apt-transport-https curl -y
-curl -fSsL https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscodium.gpg >/dev/null
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
-sudo nala update
-sudo nala install codium
-
-
-
 # apt
-sudo nala install syncthing syncthingtray gparted gimp -y
+sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorent -y
 
 # imprtant stuff
 sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
-
-
 
 # mabye not nececery
 sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli parcellite zoxide q4wine doublecmd-gtk -y
@@ -47,7 +33,6 @@ apt add-repository flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 sudo nala autoremove
-
 
 
 
