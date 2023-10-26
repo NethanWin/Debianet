@@ -61,9 +61,7 @@ sudo nala autoremove -y
 
 #not working0--------------------------------------------------------
 #titus tips mybash
-cd ~
-mkdir github
-cd github
+cd ~/github
 git clone https://github.com/christitustech/mybash
 cd mybash
 
