@@ -1,4 +1,4 @@
-sudo apt install nala
+sudo apt install nala -y
 sudo nala update && sudo nala upgrade
 
 
