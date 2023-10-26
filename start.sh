@@ -20,9 +20,12 @@ sudo nala update
 sudo nala install librewolf -y
 
 #mercury browser
-cd /github
+cd ~
+mkdir github
+cd github
 wget https://github.com/Alex313031/Mercury/releases/download/v.115.4.0/mercury-browser_115.4.0_amd64.deb
-sudo nala install mercury-browser_115.4.0_amd64.deb
+sudo nala install mercury-browser_115.4.0_amd64.deb -y
+cd /github
 rm mercury-browser_115.4.0_amd64.deb
 
 
@@ -44,23 +47,21 @@ sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli par
 apt add-repository flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo nala autoremove
-
-
-
-#TODO
-
-#to check again if its working --------------------------------------------------------
 # virt-manager
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
-#----------------------------------------------------------
+sudo nala install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
+
+sudo nala autoremove -y
 
 
 
-#not working0---------------------------------------
-# git install
+#TODO-------------------------------------
+
+
+
+
+#not working0--------------------------------------------------------
 #titus tips mybash
-cd
+cd ~
 mkdir github
 cd github
 git clone https://github.com/christitustech/mybash
