@@ -44,7 +44,7 @@ apt add-repository flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # virt-manager
-sudo nala install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
+sudo nala install qemu-system-x86 libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
 
 
 #titus tips mybash
