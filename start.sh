@@ -31,7 +31,7 @@ rm mercury-browser_115.4.0_amd64.deb
 
 
 # apt
-sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorrent mc autojump zim hardinfo -y
+sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorrent mc autojump zim hardinfo libreoffice-l10n-he -y
 
 # imprtant stuff
 sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
