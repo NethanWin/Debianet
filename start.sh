@@ -37,7 +37,7 @@ sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorre
 sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
 
 # mabye not nececery
-sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli parcellite zoxide q4wine doublecmd-gtk -y
+sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli parcellite zoxide konsole krusader -y
 
 # flathub
 apt add-repository flatpak gnome-software-plugin-flatpak
