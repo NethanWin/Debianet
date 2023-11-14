@@ -1,4 +1,4 @@
-# auto-install-deb-apps
+# debianet
 paste the following code:
 ```
 cd ~/
