@@ -28,20 +28,14 @@ sudo nala install mercury-browser_115.4.0_amd64.deb -y
 cd /github
 rm mercury-browser_115.4.0_amd64.deb
 
-
-
 # apt
-sudo nala install syncthing syncthingtray gparted gimp mercury-browser qbittorrent mc autojump zim hardinfo libreoffice-l10n-he -y
+sudo nala install syncthing gparted gimp mercury-browser qbittorrent mc autojump libreoffice-l10n-he timeshift -y
 
 # imprtant stuff
-sudo nala install python3 python3-pip vim nano wine git htop nvidia-detect neofetch kitty -y
+sudo nala install python3 python3-pip vim neovim git htop neofetch kitty -y
 
 # mabye not nececery
-sudo nala install sqlitebrowser vulkan-tools ffmpeg dwm kdeconnect trash-cli parcellite zoxide konsole krusader -y
-
-# flathub
-apt add-repository flatpak gnome-software-plugin-flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo nala install vulkan-tools zoxide -y
 
 # virt-manager
 sudo nala install qemu-system-x86 libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
@@ -56,26 +50,3 @@ chmod +x setup.sh
 rm -r ~/github/mybash
 
 sudo nala autoremove -y
-
-
-
-
-
-
-#TODO-------------------------------------
-# prefered aplications
-# web: librewolf
-# file manager: doublecmd
-# terminal: kitty
-xdg-settings set default-web-browser librewolf.desktop
-
-#mint lmde changes
-#change icons to Mint-Y-Aqua
-#Applications Mint-Y-Dark-Aqua
-#window tiling preferences maximaizing insted of tie when dragging a window to the top edge
-#
-#says which driver to install
-nvidia-detect
-
-#already on lmde(not tested):
-#sudo nala install mintstick timeshift -y
