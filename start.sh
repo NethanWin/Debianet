@@ -29,13 +29,13 @@ cd /github
 rm mercury-browser_115.4.0_amd64.deb
 
 # apt
-sudo nala install syncthing gparted gimp mercury-browser qbittorrent mc autojump libreoffice-l10n-he timeshift -y
+sudo nala install syncthing gparted mercury-browser qbittorrent mc autojump libreoffice-l10n-he timeshift dua-cli ffmpeg tldr -y
 
 # imprtant stuff
 sudo nala install python3 python3-pip vim neovim git htop neofetch kitty -y
 
 # mabye not nececery
-sudo nala install vulkan-tools zoxide -y
+sudo nala install vulkan-tools -y
 
 # virt-manager
 sudo nala install qemu-system-x86 libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
